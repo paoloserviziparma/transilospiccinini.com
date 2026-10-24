@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /grazie/
+Disallow: /en/thank-you/
+
+Sitemap: https://www.transilospiccinini.com/sitemap.xml

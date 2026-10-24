@@ -1,0 +1,75 @@
+# Sito statico: nessuna build, Netlify pubblica la cartella public così com'è.
+[build]
+  publish = "public"
+  command = ""
+
+# ---------- Redirect 301 dai vecchi indirizzi del sito Wix ----------
+[[redirects]]
+  from = "/servizi"
+  to = "/#servizi"
+  status = 301
+
+[[redirects]]
+  from = "/sondaggio"
+  to = "/qualita/"
+  status = 301
+
+[[redirects]]
+  from = "/_files/ugd/04d69b_e9addbb58a75422f92016ce0af35497c.pdf"
+  to = "/assets/docs/politiche-aziendali.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/_files/ugd/04d69b_e941267977754233892637a07377828e.pdf"
+  to = "/assets/docs/codice-etico.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/_files/ugd/04d69b_f6b9b0b1033a4613b508857f477b6e9b.pdf"
+  to = "/assets/docs/impianto-fotovoltaico.pdf"
+  status = 301
+
+# Dominio senza www -> con www
+[[redirects]]
+  from = "https://transilospiccinini.com/*"
+  to = "https://www.transilospiccinini.com/:splat"
+  status = 301
+  force = true
+
+# ---------- Intestazioni di sicurezza ----------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+# ---------- Cache ----------
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/docs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# CSS e JS: sempre ricontrollati (i link portano già ?v=hash)
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
