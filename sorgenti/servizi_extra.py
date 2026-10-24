@@ -10,7 +10,6 @@ EXTRA = {
   "faq": [
    ("Quanto materiale porta un autosilos?", "I nostri autosilos hanno un volume di 56, 60 o 62 m³. Il peso caricabile dipende dalla densità del prodotto e dai limiti di massa previsti dal Codice della strada."),
    ("Perché il filtro micronico e l’intercooler?", "Il filtro micronico pulisce l’aria che entra in contatto con il materiale durante lo scarico; l’intercooler la raffredda, per non scaldare il granulo."),
-   ("Con quanto anticipo va prenotato un trasporto?", "[SEGNAPOSTO: indicare i tempi abituali di preavviso]"),
   ],
  },
  "en": {
@@ -19,7 +18,6 @@ EXTRA = {
   "faq": [
    ("How much does a silo trailer carry?", "Our silo trailers have a volume of 56, 60 or 62 m³. The payload depends on the product’s density and on Italian road weight limits."),
    ("Why the micron filter and intercooler?", "The micron filter cleans the air that touches the product during discharge; the intercooler cools it so the granules are not heated."),
-   ("How far ahead should a transport be booked?", "[PLACEHOLDER: state usual notice period]"),
   ],
  },
 },
@@ -30,7 +28,6 @@ EXTRA = {
   "faq": [
    ("Potete ricevere i container direttamente dal treno?", "Sì. Il deposito ha un raccordo binario interno ed è collegato direttamente al parco container delle Ferrovie dell’Interporto di Parma."),
    ("Il materiale di clienti diversi resta separato?", "Sì, lo stocchiamo in stive divise per prodotto."),
-   ("Per quanto tempo potete stoccare il materiale?", "[SEGNAPOSTO: indicare durata e condizioni di stoccaggio]"),
   ],
  },
  "en": {
@@ -39,7 +36,6 @@ EXTRA = {
   "faq": [
    ("Can you receive containers straight from the train?", "Yes. The depot has a private rail siding and a direct link to the railway container yard at Interporto di Parma."),
    ("Is material from different customers kept separate?", "Yes, we store it in holds segregated by product."),
-   ("How long can you store material?", "[PLACEHOLDER: state storage duration and terms]"),
   ],
  },
 },

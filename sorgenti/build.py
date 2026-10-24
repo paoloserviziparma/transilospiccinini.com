@@ -252,7 +252,7 @@ def tabella_html(righe, intest=None, cls="tab tab-spec", etichette=("", "")):
 
 def modulo_html(lang, scelto=None):
     u = UI[lang]
-    opzioni = [SERVIZI[k][lang]["nome_modulo"] for k in SERVIZI_ORDINE] + [CONSULENZA_SEL[lang]["nome"], u["f_altro"]]
+    opzioni = [SERVIZI[k][lang]["nome_modulo"] for k in SERVIZI_ORDINE if k != "lavaggio"] + [CONSULENZA_SEL[lang]["nome"], u["f_altro"]]
     opt = "".join(f'<option{" selected" if o == scelto else ""}>{e(o)}</option>' for o in opzioni)
     azione = url("grazie", lang)
     return f'''<form class="modulo rivela" name="preventivo" method="POST" action="{azione}" data-netlify="true" netlify-honeypot="sito-web" aria-label="{u["contatti_titolo"]}">

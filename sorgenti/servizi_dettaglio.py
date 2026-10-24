@@ -319,7 +319,7 @@ DETTAGLI = {
       ("Asciugatura", "Il silos viene asciugato con aria calda, pronto per il carico successivo."),
     ],
     "faq": [
-      ("Lavate solo i vostri mezzi?", "[SEGNAPOSTO: indicare se il lavaggio è disponibile anche per mezzi di terzi]"),
+      ("Lavate solo i vostri mezzi?", "No, la stazione di lavaggio è riservata ai nostri autosilos: così ogni silos che arriva al carico è bonificato secondo le nostre procedure."),
       ("La pesa è certificata?", "Sì, è una pesa a ponte da 600 quintali, certificata e rialzata."),
     ],
   },
@@ -342,7 +342,7 @@ DETTAGLI = {
       ("Drying", "The silo is dried with hot air, ready for the next load."),
     ],
     "faq": [
-      ("Do you only wash your own vehicles?", "[PLACEHOLDER: state whether washing is available for third-party vehicles]"),
+      ("Do you only wash your own vehicles?", "No, the washing station is reserved for our own silo trailers, so every silo that arrives for loading has been cleaned to our procedures."),
       ("Is the weighbridge certified?", "Yes, it is a 60-tonne certified and raised weighbridge."),
     ],
   },
