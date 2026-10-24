@@ -311,3 +311,11 @@ main{padding-top:var(--header-h)}
 .h2-lato{font-size:clamp(28px,2.7vw,40px);font-stretch:105%}
 .testata .lead{color:var(--chiaro)}
 .testata .lead a{color:var(--bianco)}
+
+/* Riquadro "In breve" nelle pagine servizio */
+.breve-sez{background:var(--bianco);border-bottom:1px solid var(--linea)}
+.breve{padding-block:32px}
+.breve h2.kicker{font-size:13px;margin:0 0 16px}
+.breve ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px 32px}
+.breve li{position:relative;padding-left:20px;line-height:1.45;font-weight:600}
+.breve li::before{content:"";position:absolute;left:0;top:.5em;width:8px;height:8px;background:var(--blu)}

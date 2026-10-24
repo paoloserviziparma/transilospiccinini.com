@@ -8,6 +8,9 @@ from testi import DOMINIO, AZIENDA, PERCORSI, SERVIZI_ORDINE, UI, SERVIZI, CONSU
 from servizi_dettaglio import DETTAGLI
 from pagine import HOME, STORIA, QUALITA, CONSULENZE, CONTATTI, GRAZIE, ERRORE, SELETTORE
 from legale import PRIVACY, COOKIE
+from servizi_extra import EXTRA, ALT
+
+LINGUA = "it"
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PUB = os.path.join(BASE, "public")
@@ -26,6 +29,7 @@ V_JS = ver("assets/js/main.js")
 
 def img(nome, alt, cls="", sizes="100vw", par=None, eager=False, larghezze=(800, 1600)):
     """<img> WebP con srcset; par = forza parallax."""
+    alt = ALT.get(LINGUA, {}).get(nome, alt)
     srcset = ", ".join(f"/assets/img/{nome}-{w}.webp {w}w" for w in larghezze)
     src = f"/assets/img/{nome}-{larghezze[-1]}.webp"
     attr = f' class="{cls}"' if cls else ""
@@ -231,7 +235,7 @@ def galleria_html(lang, nomi, alts, titolo=None):
         return ""
     u = UI[lang]
     voci = "".join(
-        f'<button type="button" data-grande="/assets/img/{n}-1600.webp" aria-label="{u["ingrandisci"]}: {e(alts.get(n, ""))}">'
+        f'<button type="button" data-grande="/assets/img/{n}-1600.webp" aria-label="{u["ingrandisci"]}: {e(ALT[lang].get(n, alts.get(n, "")))}">'
         f'{img(n, alts.get(n, ""), sizes="(max-width:700px) 82vw, 600px")}</button>' for n in nomi)
     return f'''<section class="sez" style="padding-top:0">
 <div class="wrap"><p class="kicker">{u["galleria"]}</p>
@@ -434,7 +438,14 @@ def servizio(lang, k):
     d = DETTAGLI[k]
     dl = d[lang]
     u = UI[lang]
-    blocchi = ""
+    X = EXTRA[k][lang]
+    voci = "".join(f"<li>{e(x)}</li>" for x in X["in_breve"])
+    blocchi = f'''<section class="breve-sez"><div class="wrap"><div class="breve rivela"><h2 class="kicker">{"In breve" if lang == "it" else "At a glance"}</h2><ul>{voci}</ul></div></div></section>'''
+    tit, txt, lista = X["per_chi"]
+    li = f'<ul>{"".join(f"<li>{e(x)}</li>" for x in lista)}</ul>' if lista else ""
+    blocchi += f'''<section class="sez"><div class="wrap split" style="align-items:flex-start">
+<div style="flex:1 1 340px"><h2 class="h2 h2-lato" data-parole>{e(tit)}</h2></div>
+<div style="flex:2 1 620px" class="testo rivela" ><p style="font-size:18px">{e(txt)}</p>{li}</div></div></section>'''
     if dl.get("tabella"):
         tab = tabella_html(dl["tabella"], intest=dl.get("tabella_intest"), cls="tab tab-spec" if not dl.get("tabella_intest") else "tab",
                            etichette=("", ""))
@@ -449,7 +460,8 @@ def servizio(lang, k):
     passi = "".join(f'<li class="rivela"><b>{e(a)}</b>{e(b)}</li>' for a, b in dl["passi"])
     blocchi += f'<section class="sez"{" style=\"padding-top:0\"" if dl.get("specs") else ""}><div class="wrap"><h2 class="h2" style="margin-bottom:32px" data-parole>{e(dl["passi_titolo"])}</h2><ol class="passi">{passi}</ol></div></section>'
     blocchi += galleria_html(lang, d["galleria"], dl["alt"])
-    blocchi += faq_html(lang, dl["faq"])
+    faq_tutte = dl["faq"] + X["faq"]
+    blocchi += faq_html(lang, faq_tutte)
     cta = f'''<section class="sez sez-blu"><div class="wrap split">
 <div><h2 class="h2" data-parole>{e(t["nome_modulo"])}: {"parliamone" if lang == "it" else "let’s talk"}</h2></div>
 <div><p class="lead" style="margin-bottom:24px">{e(u["contatti_lead"])}</p><div class="btns"><a class="btn btn-l" href="{url("contatti", lang)}?servizio={k}#preventivo">{u["preventivo_lungo"]} →</a><a class="btn btn-o" href="tel:{A["tel_link"]}">{u["telefono"]} {A["tel"]}</a></div></div>
@@ -461,7 +473,7 @@ def servizio(lang, k):
          "provider": {"@id": DOMINIO + "/#azienda"}, "areaServed": {"@type": "Country", "name": "Italia" if lang == "it" else "Italy"},
          "image": DOMINIO + f"/assets/img/{s['foto']}-1600.webp"},
         briciole_ld([(u["home"], url("home", lang)), (t["nome"], url(k, lang))]),
-        faq_ld(dl["faq"]),
+        faq_ld(faq_tutte),
     ]
     return pagina(lang, k, t["title"], t["desc"], corpo, ld)
 
@@ -592,7 +604,9 @@ def sitemap():
 
 
 def main():
+    global LINGUA
     for lang in ("it", "en"):
+        LINGUA = lang
         scrivi(url("home", lang), home(lang))
         for k in SERVIZI_ORDINE:
             scrivi(url(k, lang), servizio(lang, k))
@@ -603,6 +617,7 @@ def main():
         scrivi(url("privacy", lang), legale(lang, "privacy", PRIVACY[lang]))
         scrivi(url("cookie", lang), legale(lang, "cookie", COOKIE[lang]))
         scrivi(url("grazie", lang), grazie(lang))
+    LINGUA = "it"
     scrivi("/404.html", errore())
     scrivi("/sitemap.xml", sitemap())
     scrivi("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /grazie/\nDisallow: /en/thank-you/\n\nSitemap: {DOMINIO}/sitemap.xml\n")

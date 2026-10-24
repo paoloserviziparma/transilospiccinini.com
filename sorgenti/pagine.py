@@ -3,8 +3,8 @@
 
 HOME = {
 "it": {
-  "title": "Trasporto plastica sfusa in autosilos, deposito e cambio imballi | Piccinini",
-  "desc": "Autotrasporti Piccinini, Interporto di Parma: trasporto in autosilos e portacontainer di plastica in granuli e polveri, deposito intermodale di 26.000 m², cambio imballi, aspirazione, lavaggio. Dal 1975.",
+  "title": "Trasporto plastica sfusa in autosilos, Parma | Piccinini",
+  "desc": "Trasporto in autosilos di plastica in granuli e polveri, deposito di 26.000 m² all’Interporto di Parma, cambio imballi e aspirazione. Dal 1975.",
   "riga_locale": "Autotrasporti a Fontevivo (PR) · Interporto di Parma",
   "h1": "Trasporto, deposito e cambio imballi di materie plastiche sfuse.",
   "lead": "Trasporto in autosilos e portacontainer, deposito intermodale, cambio imballi, aspirazione, lavaggio e vagliatura. Da cinque generazioni la famiglia Piccinini guida l’azienda in prima persona.",
@@ -59,8 +59,8 @@ HOME = {
   ],
 },
 "en": {
-  "title": "Bulk plastic transport by silo truck, storage & repackaging, Italy | Piccinini",
-  "desc": "Autotrasporti Piccinini, Parma inland terminal (Italy): silo truck and container transport of plastic granules and powders, 26,000 m² intermodal depot, repackaging, vacuum unloading, washing. Since 1975.",
+  "title": "Bulk plastic haulage by silo truck, Italy | Piccinini",
+  "desc": "Silo truck transport of plastic granules and powders, a 26,000 m² depot at the Parma inland terminal, repackaging and vacuum unloading. Since 1975.",
   "riga_locale": "Bulk haulier · Interporto di Parma, Italy",
   "h1": "Transport, storage and repackaging of bulk plastics.",
   "lead": "Silo truck and container transport, intermodal storage, repackaging, vacuum unloading, washing and screening. For five generations the Piccinini family has run the business hands-on.",
@@ -153,8 +153,8 @@ SELETTORE = {
 
 STORIA = {
 "it": {
-  "title": "La nostra storia: cinque generazioni di trasporti | Piccinini",
-  "desc": "Oltre 100 anni e cinque generazioni: dalla ghiaia trasportata con i cavalli all’autotrasporto di plastica sfusa in autosilos, fino alla nuova sede all’Interporto di Parma.",
+  "title": "Storia: cinque generazioni nei trasporti | Piccinini",
+  "desc": "Oltre 100 anni e cinque generazioni: dalla ghiaia trasportata con i cavalli agli autosilos per la plastica sfusa, fino alla sede all’Interporto di Parma.",
   "riga_locale": "Dal primo Novecento · Parma",
   "h1": "Cinque generazioni, sempre nei trasporti",
   "lead": "La nostra è una storia lunga più di 100 anni e cinque generazioni, sempre legata al mondo dei trasporti. La famiglia Piccinini è coinvolta in prima persona nella gestione dell’azienda.",
@@ -181,8 +181,8 @@ STORIA = {
   "sede_alt": {"sede-edificio-1": "La nuova sede vista dal piazzale con gli autosilos", "sede-edificio-2": "Ingresso della nuova sede", "sede-taglio-nastro": "Il taglio del nastro all’inaugurazione della nuova sede", "sede-persone": "Ospiti all’inaugurazione della nuova sede", "sede-officina": "L’officina interna con un autosilos in manutenzione", "sede-stanza-1": "Interno della nuova sede", "sede-stanza-2": "Interno della nuova sede", "sede-stanza-3": "Interno della nuova sede"},
 },
 "en": {
-  "title": "Our history: five generations in transport | Piccinini",
-  "desc": "Over 100 years and five generations: from carting gravel with horses to bulk plastics haulage by silo truck, and our new head office at the Parma inland terminal.",
+  "title": "History: five generations in transport | Piccinini",
+  "desc": "Over 100 years and five generations: from carting gravel with horses to silo trucks for bulk plastics and a head office at the Parma inland terminal.",
   "riga_locale": "Since the early 1900s · Parma, Italy",
   "h1": "Five generations, always in transport",
   "lead": "Ours is a story of more than 100 years and five generations, always tied to transport. The Piccinini family is personally involved in running the company.",
@@ -212,8 +212,8 @@ STORIA = {
 
 QUALITA = {
 "it": {
-  "title": "Qualità e certificazioni ISO 9001, SQAS, SSA | Piccinini",
-  "desc": "Certificati UNI EN ISO 9001 dal 1993, SQAS dal 2008 e codice di pratica SSA dal 2010. Sicurezza, monitoraggio dei mezzi, videosorveglianza e sostenibilità con fotovoltaico e accumulo.",
+  "title": "Certificazioni ISO 9001, SQAS e SSA | Piccinini",
+  "desc": "ISO 9001 dal 1993, SQAS dal 2008, SSA dal 2010. Sicurezza, monitoraggio dei mezzi e sostenibilità: Eco Stars, Michelin e fotovoltaico con accumulo.",
   "riga_locale": "Certificazioni · Sicurezza · Ambiente",
   "h1": "Qualità, sicurezza e sostenibilità",
   "lead": "La qualità è il cuore del nostro lavoro: un impegno che portiamo avanti da sempre, unendo tecnologia, competenza e sicurezza.",
@@ -234,7 +234,7 @@ QUALITA = {
   "sost_titolo": "La sostenibilità fa parte del lavoro",
   "sostenibilita": [
     "Nel 2014 abbiamo ottenuto la valutazione Eco Stars a 5 stelle, progetto europeo per la riduzione delle emissioni a cui ha aderito la città di Parma.",
-    "Grazie alla partnership con Michelin abbiamo ottenuto l’attestato per la gestione sostenibile degli pneumatici, usando anche pneumatici ricoperti “Remix”.",
+    "Grazie alla partnership con Michelin abbiamo ottenuto l’attestato per la gestione sostenibile degli pneumatici, usando anche pneumatici riscolpiti e ricostruiti “Remix”. Secondo le stime di Michelin, nel 2025 questa gestione ha consentito di risparmiare fino a 27,8 tonnellate di CO₂ e 11,1 tonnellate di materia prima.",
     "Nel 2026 abbiamo realizzato un impianto fotovoltaico da 72 kWp sulla copertura della sede, con due batterie di accumulo da 80 kWh complessivi, per aumentare l’autonomia energetica e ridurre l’impatto ambientale. <a href=\"/assets/docs/impianto-fotovoltaico.pdf\">Scheda del progetto (PDF)</a>",
   ],
   "pnrr": "Progetto realizzato con il sostegno dell’Unione Europea, nell’ambito del programma NextGenerationEU e del Piano Nazionale di Ripresa e Resilienza (PNRR). Importo del progetto: € 102.253,89 · Contributo pubblico concesso: € 37.009,36.",
@@ -243,8 +243,8 @@ QUALITA = {
   "att_alt": {"qualita-iso-p1": "Certificato UNI EN ISO 9001:2015, pagina 1", "qualita-iso-p2": "Certificato UNI EN ISO 9001:2015, pagina 2", "qualita-sqas-2024": "Attestation report SQAS 2024", "qualita-sqas": "Attestato SQAS", "qualita-michelin": "Attestato Michelin per la gestione sostenibile degli pneumatici", "qualita-att-1": "Attestato aziendale", "qualita-att-2": "Attestato aziendale"},
 },
 "en": {
-  "title": "Quality & certifications: ISO 9001, SQAS, SSA | Piccinini",
-  "desc": "UNI EN ISO 9001 certified since 1993, SQAS since 2008 and SSA code of practice since 2010. Safety, vehicle tracking, CCTV and sustainability with solar power and battery storage.",
+  "title": "ISO 9001, SQAS and SSA certifications | Piccinini",
+  "desc": "ISO 9001 since 1993, SQAS since 2008, SSA since 2010. Safety, vehicle tracking and sustainability: Eco Stars, Michelin and solar with storage.",
   "riga_locale": "Certifications · Safety · Environment",
   "h1": "Quality, safety and sustainability",
   "lead": "Quality is at the heart of what we do: a long-standing commitment that brings together technology, expertise and safety.",
@@ -265,7 +265,7 @@ QUALITA = {
   "sost_titolo": "Sustainability is part of the job",
   "sostenibilita": [
     "In 2014 we were awarded a 5-star Eco Stars rating, a European emissions-reduction scheme joined by the city of Parma.",
-    "Through our partnership with Michelin we obtained certification for sustainable tyre management, including the use of retreaded “Remix” tyres.",
+    "Through our partnership with Michelin we obtained certification for sustainable tyre management, including regrooved and retreaded “Remix” tyres. According to Michelin’s estimates, in 2025 this saved up to 27.8 tonnes of CO₂ and 11.1 tonnes of raw materials.",
     "In 2026 we installed a 72 kWp solar plant on our head office roof, with two storage batteries totalling 80 kWh, to increase energy independence and reduce our environmental impact. <a href=\"/assets/docs/impianto-fotovoltaico.pdf\">Project sheet (PDF, Italian)</a>",
   ],
   "pnrr": "Project carried out with the support of the European Union under the NextGenerationEU programme and Italy’s National Recovery and Resilience Plan (PNRR). Project amount: €102,253.89 · Public grant awarded: €37,009.36.",
@@ -277,8 +277,8 @@ QUALITA = {
 
 CONSULENZE = {
 "it": {
-  "title": "Consulenza tecnica su impianti di stoccaggio materie sfuse | Piccinini",
-  "desc": "Consulenza tecnica sugli impianti di stoccaggio di materie prime sfuse: procedure di scarico autosilos, sicurezza delle silerie, viabilità interna, ingombri dei mezzi, rumore e logistica intermodale.",
+  "title": "Consulenza su impianti di stoccaggio | Piccinini",
+  "desc": "Consulenza tecnica sugli impianti di stoccaggio di materie sfuse: scarico autosilos, sicurezza silerie, viabilità, ingombri dei mezzi, rumore.",
   "riga_locale": "Consulenza tecnica · in tutta Italia",
   "h1": "Consulenza sugli impianti di stoccaggio",
   "lead": "Grazie a 50 anni di esperienza offriamo consulenza tecnica sugli impianti di stoccaggio di materie prime sfuse. L’esperienza quotidiana sul campo ci ha fatto conoscere le loro criticità e ci permette di valutare con competenza le migliorie possibili.",
@@ -292,8 +292,8 @@ CONSULENZE = {
   "cta_titolo": "Richiedi una visita tecnica",
 },
 "en": {
-  "title": "Technical consulting on bulk storage plants | Piccinini",
-  "desc": "Technical consulting on storage plants for bulk raw materials: silo truck discharge procedures, silo safety equipment, on-site traffic, vehicle clearances, noise and intermodal logistics.",
+  "title": "Bulk storage plant consulting | Piccinini",
+  "desc": "Technical consulting on bulk storage plants: silo truck discharge, silo safety, on-site traffic, vehicle clearances, noise and intermodal logistics.",
   "riga_locale": "Technical consulting · Italy",
   "h1": "Consulting on storage plants",
   "lead": "Drawing on 50 years of experience, we offer technical consulting on storage plants for bulk raw materials. Working on site every day has taught us their weak points and lets us assess possible improvements competently.",
@@ -310,16 +310,16 @@ CONSULENZE = {
 
 CONTATTI = {
 "it": {
-  "title": "Contatti e preventivi | Autotrasporti Piccinini, Interporto di Parma",
-  "desc": "Contatta Autotrasporti Piccinini: Via Parigi 8, Interporto di Parma, Fontevivo (PR). Tel. 0521.615186, ass.clienti@transilospiccinini.com. Richiedi un preventivo per trasporto, deposito e cambio imballi.",
+  "title": "Contatti e preventivi, Interporto di Parma | Piccinini",
+  "desc": "Autotrasporti Piccinini, Via Parigi 8, Interporto di Parma, Fontevivo (PR). Tel. 0521.615186. Richiedi un preventivo per trasporto e deposito.",
   "riga_locale": "Interporto di Parma · Fontevivo (PR)",
   "h1": "Contatti",
   "lead": "Scrivici o chiamaci: per preventivi su trasporto, deposito, cambio imballi e gli altri servizi usa il modulo qui sotto.",
   "form_titolo": "Richiedi un preventivo",
 },
 "en": {
-  "title": "Contact & quotes | Autotrasporti Piccinini, Parma, Italy",
-  "desc": "Contact Autotrasporti Piccinini: Via Parigi 8, Interporto di Parma, Fontevivo (PR), Italy. Tel. +39 0521 615186, ass.clienti@transilospiccinini.com. Request a quote for transport, storage and repackaging.",
+  "title": "Contact and quotes, Parma, Italy | Piccinini",
+  "desc": "Autotrasporti Piccinini, Via Parigi 8, Interporto di Parma, Fontevivo (PR), Italy. Tel. +39 0521 615186. Request a quote for transport and storage.",
   "riga_locale": "Interporto di Parma · Italy",
   "h1": "Contact",
   "lead": "Write or call us: for quotes on transport, storage, repackaging and our other services, use the form below.",

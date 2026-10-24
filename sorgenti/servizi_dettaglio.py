@@ -4,7 +4,7 @@ Solo dati presenti sul sito attuale."""
 
 DETTAGLI = {
 "trasporti": {
-  "galleria": ["autosilos-1", "autosilos-2", "autosilos-3", "autosilos-4", "autosilos-5",
+  "galleria": ["autosilos-2", "autosilos-3", "autosilos-4", "autosilos-5",
                "portacontainer-1", "portacontainer-2", "portacontainer-3", "portacontainer-4", "portacontainer-5"],
   "it": {
     "alt": {
