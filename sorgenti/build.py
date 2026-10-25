@@ -206,7 +206,7 @@ TESTATA_FOTO = {"aspirazione": "aspirazione-5", "qualita": "qualita-silo"}
 TESTATA_POS = {
     "trasporti": "50% 35%", "deposito": "50% 30%", "imballi": "50% 45%", "aspirazione": "50% 55%",
     "lavaggio": "50% 40%", "asciugatura": "50% 50%", "storia": "50% 30%", "qualita": "50% 0%",
-    "consulenze": "50% 50%",
+    "consulenze": "50% 50%", "contatti": "50% 30%",
 }
 
 
@@ -222,7 +222,7 @@ def testata(lang, chiave, riga, h1, lead, foto=None, alt="", cta=True, briciole=
         foto = TESTATA_FOTO.get(chiave, foto)
         pos = TESTATA_POS.get(chiave, "50% 50%")
         f = f'<div class="testata-foto" style="--pos:{pos}">{img(foto, alt, par="0.14", eager=True, sizes="100vw")}</div>'
-        cls = "testata testata-scena"
+        cls = "testata testata-scena" + (" testata-bassa" if chiave == "contatti" else "")
     return f'''<section class="{cls}">
 {f}
 <div class="wrap">
@@ -569,11 +569,9 @@ def consulenze(lang):
 def contatti(lang):
     P = CONTATTI[lang]
     u = UI[lang]
-    corpo = f'''<section class="testata"><div class="wrap">
-<nav class="briciole entra entra-1" aria-label="Breadcrumb"><ol><li><a href="{url("home", lang)}">{u["home"]}</a></li><li><span aria-current="page">{u["contatti"]}</span></li></ol></nav>
-<h1 class="entra entra-2"><span class="riga-locale">{e(P["riga_locale"])}</span>{e(P["h1"])}</h1>
-<p class="lead entra entra-3">{e(P["lead"])}</p></div></section>
-{contatti_html(lang, P["form_titolo"])}'''
+    alt_sede = ALT[lang]["sede-edificio-2"]
+    corpo = testata(lang, "contatti", P["riga_locale"], P["h1"], e(P["lead"]), foto="sede-edificio-2", alt=alt_sede, cta=False) + \
+        f'''\n{contatti_html(lang, P["form_titolo"])}'''
     ld = [briciole_ld([(u["home"], url("home", lang)), (u["contatti"], url("contatti", lang))]),
           {"@type": "ContactPage", "url": DOMINIO + url("contatti", lang), "name": P["title"], "about": {"@id": DOMINIO + "/#azienda"}}]
     return pagina(lang, "contatti", P["title"], P["desc"], corpo, ld)
