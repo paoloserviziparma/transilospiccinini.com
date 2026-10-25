@@ -202,10 +202,10 @@ def scrivi(perc, contenuto):
 
 # ------------------------------------------------------------------ blocchi
 # Foto e inquadratura delle testate con il titolo sopra la foto
-TESTATA_FOTO = {"aspirazione": "aspirazione-5"}
+TESTATA_FOTO = {"aspirazione": "aspirazione-5", "qualita": "qualita-silo"}
 TESTATA_POS = {
     "trasporti": "50% 35%", "deposito": "50% 30%", "imballi": "50% 45%", "aspirazione": "50% 55%",
-    "lavaggio": "50% 40%", "asciugatura": "50% 50%", "storia": "50% 30%", "qualita": "50% 5%",
+    "lavaggio": "50% 40%", "asciugatura": "50% 50%", "storia": "50% 30%", "qualita": "50% 0%",
     "consulenze": "50% 50%",
 }
 
