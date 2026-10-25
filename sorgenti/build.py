@@ -358,12 +358,14 @@ def home(lang):
         metodi += f'<div class="metodo rivela"><h3>{e(m["titolo"])}</h3><dl>{dl}</dl></div>'
     cert = "".join(f'<div><span class="a">{e(a)}</span><b>{e(b)}</b><p>{e(c)}</p></div>' for a, b, c in H["cert"])
     corpo = f'''<section class="hero">
+<div class="hero-scena">
+<div class="hero-foto">{img("hero-taglio", H["hero_alt"], par="0.12", eager=True, larghezze=(800, 1200, 2000))}</div>
 <div class="wrap hero-testo">
 <h1 class="entra entra-1"><span class="riga-locale">{e(H["riga_locale"])}</span>{e(H["h1"])}</h1>
 <div class="hero-lato"><p class="entra entra-2">{H["lead"]}</p>
 <div class="btns entra entra-3"><a class="btn btn-l" href="#preventivo">{u["preventivo_lungo"]} →</a><a class="btn btn-o" href="#servizi">{u["scopri_servizi"]}</a></div></div>
 </div>
-<div class="hero-foto">{img("hero", H["hero_alt"], par="0.12", eager=True, larghezze=(800, 1200, 2000))}</div>
+</div>
 <div class="numeri"><div class="wrap">{numeri}</div></div>
 </section>
 

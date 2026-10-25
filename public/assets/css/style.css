@@ -319,3 +319,37 @@ main{padding-top:var(--header-h)}
 .breve ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:12px 32px}
 .breve li{position:relative;padding-left:20px;line-height:1.45;font-weight:600}
 .breve li::before{content:"";position:absolute;left:0;top:.5em;width:8px;height:8px;background:var(--blu)}
+
+/* Hero: titolo sopra la foto */
+.hero-scena{position:relative;display:flex;align-items:flex-end;min-height:clamp(560px,calc(100svh - var(--header-h) - 90px),860px);isolation:isolate}
+.hero-scena .hero-foto{position:absolute;inset:0;height:auto;z-index:-1}
+.hero-scena .hero-foto img{object-position:50% 30%}
+.hero-scena .hero-foto::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(10,11,61,.94) 0%,rgba(10,11,61,.82) 28%,rgba(10,11,61,.35) 55%,rgba(10,11,61,0) 75%),
+  linear-gradient(to right,rgba(10,11,61,.55) 0%,rgba(10,11,61,0) 60%)}
+.hero-scena .hero-testo{position:relative;width:100%;padding-block:clamp(120px,22vh,220px) clamp(36px,5vw,56px)}
+.hero-scena h1,.hero-scena .hero-lato p{text-shadow:0 2px 18px rgba(10,11,61,.55)}
+.hero-scena .hero-lato p{color:#E6E9FF}
+@media (max-width:700px){
+  .hero-scena{min-height:auto}
+  .hero-scena .hero-foto{bottom:auto;height:62vw}
+  .hero-scena .hero-foto::after{background:linear-gradient(to top,rgba(10,11,61,1) 0%,rgba(10,11,61,.6) 30%,rgba(10,11,61,0) 70%)}
+  .hero-scena .hero-testo{padding-top:48vw}
+}
+.hero-scena h1{font-size:clamp(32px,3.9vw,58px);flex:1 1 640px;max-width:21ch;line-height:1.05}
+.hero-scena .hero-testo{padding-top:clamp(220px,40vh,420px);align-items:flex-end}
+.hero-scena .hero-foto img{object-position:50% 22%}
+@media (max-width:700px){
+  .hero-scena .hero-foto{height:78vw}
+  .hero-scena .hero-testo{padding-top:64vw}
+  .hero-scena h1{max-width:none}
+}
+.hero-scena .hero-foto img{object-position:50% 40%}
+.hero-scena .hero-foto::after{background:
+  linear-gradient(to top,rgba(10,11,61,.94) 0%,rgba(10,11,61,.8) 26%,rgba(10,11,61,.3) 50%,rgba(10,11,61,0) 68%),
+  linear-gradient(to right,rgba(10,11,61,.35) 0%,rgba(10,11,61,0) 50%)}
+@media (max-width:700px){
+  .hero-scena .hero-foto{height:70vw}
+  .hero-scena .hero-testo{padding-top:56vw}
+  .hero-scena .hero-foto::after{background:linear-gradient(to top,rgba(10,11,61,1) 0%,rgba(10,11,61,.55) 28%,rgba(10,11,61,0) 60%)}
+}
