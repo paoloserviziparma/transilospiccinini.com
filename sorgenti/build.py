@@ -201,21 +201,36 @@ def scrivi(perc, contenuto):
 
 
 # ------------------------------------------------------------------ blocchi
+# Foto e inquadratura delle testate con il titolo sopra la foto
+TESTATA_FOTO = {"aspirazione": "aspirazione-5"}
+TESTATA_POS = {
+    "trasporti": "50% 35%", "deposito": "50% 30%", "imballi": "50% 45%", "aspirazione": "50% 55%",
+    "lavaggio": "50% 40%", "asciugatura": "50% 50%", "storia": "50% 30%", "qualita": "50% 5%",
+    "consulenze": "50% 50%",
+}
+
+
 def testata(lang, chiave, riga, h1, lead, foto=None, alt="", cta=True, briciole=None):
     u = UI[lang]
     br = briciole or [(u["home"], url("home", lang))]
     br_html = "".join(f'<li><a href="{p}">{e(n)}</a></li>' for n, p in br)
     br_html += f'<li><span aria-current="page">{e(h1)}</span></li>'
     btn = f'<div class="btns entra entra-4" style="margin-top:32px"><a class="btn btn-l" href="{url("contatti", lang)}#preventivo">{u["preventivo_lungo"]} →</a></div>' if cta else ""
-    f = f'<div class="testata-foto">{img(foto, alt, par="0.14", eager=True, sizes="100vw")}</div>' if foto else ""
-    return f'''<section class="testata">
+    if not foto:
+        f, cls = "", "testata"
+    else:
+        foto = TESTATA_FOTO.get(chiave, foto)
+        pos = TESTATA_POS.get(chiave, "50% 50%")
+        f = f'<div class="testata-foto" style="--pos:{pos}">{img(foto, alt, par="0.14", eager=True, sizes="100vw")}</div>'
+        cls = "testata testata-scena"
+    return f'''<section class="{cls}">
+{f}
 <div class="wrap">
 <nav class="briciole entra entra-1" aria-label="Breadcrumb"><ol>{br_html}</ol></nav>
 <h1 class="entra entra-2"><span class="riga-locale">{e(riga)}</span>{e(h1)}</h1>
 <p class="lead entra entra-3">{lead}</p>
 {btn}
 </div>
-{f}
 </section>'''
 
 

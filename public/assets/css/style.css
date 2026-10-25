@@ -353,3 +353,22 @@ main{padding-top:var(--header-h)}
   .hero-scena .hero-testo{padding-top:56vw}
   .hero-scena .hero-foto::after{background:linear-gradient(to top,rgba(10,11,61,1) 0%,rgba(10,11,61,.55) 28%,rgba(10,11,61,0) 60%)}
 }
+
+/* Testate delle pagine interne: titolo sopra la foto */
+.testata-scena{position:relative;isolation:isolate;display:flex;align-items:flex-end;min-height:clamp(520px,calc(100svh - var(--header-h) - 60px),760px)}
+.testata-scena .testata-foto{position:absolute;inset:0;height:auto;z-index:-1}
+.testata-scena .testata-foto img{object-position:var(--pos,50% 50%)}
+.testata-scena .testata-foto::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(10,11,61,.95) 0%,rgba(10,11,61,.82) 30%,rgba(10,11,61,.35) 58%,rgba(10,11,61,.05) 80%),
+  linear-gradient(to right,rgba(10,11,61,.5) 0%,rgba(10,11,61,0) 55%)}
+.testata-scena .wrap{position:relative;width:100%;padding-top:clamp(200px,34vh,360px)}
+.testata-scena h1,.testata-scena .lead{text-shadow:0 2px 18px rgba(10,11,61,.55)}
+.testata-scena .lead{color:#E6E9FF}
+.testata-scena .briciole a,.testata-scena .briciole [aria-current]{color:#E6E9FF}
+@media (max-width:700px){
+  .testata-scena{min-height:auto}
+  .testata-scena .testata-foto{bottom:auto;height:72vw}
+  .testata-scena .testata-foto::after{background:linear-gradient(to top,rgba(10,11,61,1) 0%,rgba(10,11,61,.55) 28%,rgba(10,11,61,.1) 60%)}
+  .testata-scena .wrap{padding-top:58vw}
+}
+@media (max-width:700px){.testata-scena .briciole li:last-child{display:none}.testata-scena .briciole li:nth-last-child(2)::after{content:""}}
