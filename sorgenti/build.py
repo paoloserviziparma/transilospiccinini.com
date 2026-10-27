@@ -27,9 +27,18 @@ V_CSS = ver("assets/css/style.css")
 V_JS = ver("assets/js/main.js")
 
 
+def grande(nome):
+    """Versione grande di una foto per la galleria a schermo intero."""
+    if os.path.exists(os.path.join(PUB, f"assets/img/{nome}-hd-2400.webp")):
+        return f"/assets/img/{nome}-hd-2400.webp"
+    return f"/assets/img/{nome}-1600.webp"
+
+
 def img(nome, alt, cls="", sizes="100vw", par=None, eager=False, larghezze=(800, 1600)):
     """<img> WebP con srcset; par = forza parallax."""
     alt = ALT.get(LINGUA, {}).get(nome, alt)
+    if os.path.exists(os.path.join(PUB, f"assets/img/{nome}-hd-1600.webp")):
+        nome, larghezze = nome + "-hd", (800, 1600, 2400)
     srcset = ", ".join(f"/assets/img/{nome}-{w}.webp {w}w" for w in larghezze)
     src = f"/assets/img/{nome}-{larghezze[-1]}.webp"
     attr = f' class="{cls}"' if cls else ""
@@ -250,7 +259,7 @@ def galleria_html(lang, nomi, alts, titolo=None):
         return ""
     u = UI[lang]
     voci = "".join(
-        f'<button type="button" data-grande="/assets/img/{n}-1600.webp" aria-label="{u["ingrandisci"]}: {e(ALT[lang].get(n, alts.get(n, "")))}">'
+        f'<button type="button" data-grande="{grande(n)}" aria-label="{u["ingrandisci"]}: {e(ALT[lang].get(n, alts.get(n, "")))}">'
         f'{img(n, alts.get(n, ""), sizes="(max-width:700px) 82vw, 600px")}</button>' for n in nomi)
     return f'''<section class="sez" style="padding-top:0">
 <div class="wrap"><p class="kicker">{u["galleria"]}</p>
@@ -488,7 +497,7 @@ def servizio(lang, k):
     ld = [
         {"@type": "Service", "name": t["h1"], "serviceType": t["nome"], "description": t["desc"], "url": DOMINIO + url(k, lang),
          "provider": {"@id": DOMINIO + "/#azienda"}, "areaServed": {"@type": "Country", "name": "Italia" if lang == "it" else "Italy"},
-         "image": DOMINIO + f"/assets/img/{s['foto']}-1600.webp"},
+         "image": DOMINIO + grande(s["foto"])},
         briciole_ld([(u["home"], url("home", lang)), (t["nome"], url(k, lang))]),
         faq_ld(faq_tutte),
     ]
