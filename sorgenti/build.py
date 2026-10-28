@@ -39,7 +39,13 @@ def img(nome, alt, cls="", sizes="100vw", par=None, eager=False, larghezze=(800,
     alt = ALT.get(LINGUA, {}).get(nome, alt)
     if os.path.exists(os.path.join(PUB, f"assets/img/{nome}-hd-1600.webp")):
         nome, larghezze = nome + "-hd", (800, 1600, 2400)
-    srcset = ", ".join(f"/assets/img/{nome}-{w}.webp {w}w" for w in larghezze)
+    from PIL import Image as _I
+    reali = []
+    for w in larghezze:
+        with _I.open(os.path.join(PUB, f"assets/img/{nome}-{w}.webp")) as _im:
+            if _im.width not in [r for _, r in reali]:
+                reali.append((w, _im.width))
+    srcset = ", ".join(f"/assets/img/{nome}-{w}.webp {r}w" for w, r in reali)
     src = f"/assets/img/{nome}-{larghezze[-1]}.webp"
     attr = f' class="{cls}"' if cls else ""
     attr += f' data-parallax="{par}"' if par else ""
