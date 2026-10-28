@@ -220,8 +220,8 @@ def scrivi(perc, contenuto):
 TESTATA_FOTO = {"aspirazione": "aspirazione-5", "qualita": "qualita-silo"}
 TESTATA_POS = {
     "trasporti": "50% 35%", "deposito": "50% 30%", "imballi": "50% 45%", "aspirazione": "50% 55%",
-    "lavaggio": "50% 40%", "asciugatura": "50% 50%", "storia": "50% 30%", "qualita": "50% 0%",
-    "consulenze": "50% 50%", "contatti": "50% 30%",
+    "lavaggio": "50% 40%", "asciugatura": "50% 50%", "storia": "50% 78%", "qualita": "50% 0%",
+    "consulenze": "50% 50%", "contatti": "50% 80%",
 }
 
 
@@ -408,7 +408,7 @@ def home(lang):
 <ol class="tempo rivela">{tempo}</ol>
 <p style="margin-top:28px"><a class="link-freccia" href="{url("storia", lang)}">{e(H["chi_link"])} →</a></p>
 </div>
-<div class="foto-par foto-sede">{img("sede-capannone", H["sede_alt"], par="0.1", sizes="360px")}</div>
+<div class="foto-par foto-sede">{img("sede-giorno", H["sede_alt"], par="0.1", sizes="360px")}</div>
 </div>
 </section>
 
@@ -537,7 +537,7 @@ def storia(lang):
 </div></section>
 <div class="sez-bianca">{galleria_html(lang, ["sede-edificio-1", "sede-edificio-2", "sede-taglio-nastro", "sede-persone", "sede-officina", "sede-stanza-1", "sede-stanza-2", "sede-stanza-3"], P["sede_alt"])}</div>
 {contatti_html(lang)}'''
-    return semplice(lang, "storia", P, corpo, foto="sede-edificio-2", alt=P["testata_alt"])
+    return semplice(lang, "storia", P, corpo, foto="sede-giorno", alt=P["testata_alt"])
 
 
 def qualita(lang):
@@ -584,8 +584,8 @@ def consulenze(lang):
 def contatti(lang):
     P = CONTATTI[lang]
     u = UI[lang]
-    alt_sede = ALT[lang]["sede-edificio-2"]
-    corpo = testata(lang, "contatti", P["riga_locale"], P["h1"], e(P["lead"]), foto="sede-edificio-2", alt=alt_sede, cta=False) + \
+    alt_sede = ALT[lang]["sede-giorno"]
+    corpo = testata(lang, "contatti", P["riga_locale"], P["h1"], e(P["lead"]), foto="sede-giorno", alt=alt_sede, cta=False) + \
         f'''\n{contatti_html(lang, P["form_titolo"])}'''
     ld = [briciole_ld([(u["home"], url("home", lang)), (u["contatti"], url("contatti", lang))]),
           {"@type": "ContactPage", "url": DOMINIO + url("contatti", lang), "name": P["title"], "about": {"@id": DOMINIO + "/#azienda"}}]
