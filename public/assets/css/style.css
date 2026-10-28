@@ -375,4 +375,3 @@ main{padding-top:var(--header-h)}
 .testata-bassa{min-height:clamp(380px,50vh,500px)}
 .testata-bassa .wrap{padding-top:clamp(120px,20vh,200px)}
 @media (max-width:700px){.testata-bassa{min-height:auto}.testata-bassa .wrap{padding-top:58vw}}
-.foto-sede img[src*="sede-giorno"]{object-position:47% 88%}

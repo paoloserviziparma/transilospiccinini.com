@@ -161,6 +161,9 @@ ALT = {
  "sede-stanza-2": "Sala riunioni con tavolo in legno e foto d’epoca di un’autocisterna Piccinini alla parete",
  "sede-stanza-3": "Ufficio traffico con il planning a parete dei mezzi e degli autisti",
  "sede-capannone": "La sede Piccinini di notte, con la facciata illuminata dal tricolore",
+
+ "sede-piazzale": "La sede Piccinini all’Interporto di Parma vista dal piazzale, con la colonna con il nome dell’azienda all’ingresso e il cielo con nuvole",
+ "sede-piazzale-taglio": "La sede Piccinini all’Interporto di Parma vista dal piazzale, con la colonna con il nome dell’azienda all’ingresso e il cielo con nuvole",
  "sede-giorno": "La sede Piccinini all’Interporto di Parma con la colonna con il nome dell’azienda all’ingresso, alberi e cielo con nuvole",
  "qualita-iso-p1": "Certificato UNI EN ISO 9001:2015 di Autotrasporti Piccinini, pagina 1",
  "qualita-iso-p2": "Certificato UNI EN ISO 9001:2015 di Autotrasporti Piccinini, pagina 2",
@@ -218,6 +221,9 @@ ALT = {
  "sede-stanza-2": "Meeting room with wooden table and a vintage photo of a Piccinini tanker on the wall",
  "sede-stanza-3": "Traffic office with the wall planner for vehicles and drivers",
  "sede-capannone": "The Piccinini head office at night, its facade lit in the colours of the Italian flag",
+
+ "sede-piazzale": "The Piccinini head office at the Parma inland terminal seen from the yard, with the company name on a column at the entrance and a cloudy sky",
+ "sede-piazzale-taglio": "The Piccinini head office at the Parma inland terminal seen from the yard, with the company name on a column at the entrance and a cloudy sky",
  "sede-giorno": "The Piccinini head office at the Parma inland terminal, with the company name on a column at the entrance, trees and a cloudy sky",
  "qualita-iso-p1": "Autotrasporti Piccinini UNI EN ISO 9001:2015 certificate, page 1",
  "qualita-iso-p2": "Autotrasporti Piccinini UNI EN ISO 9001:2015 certificate, page 2",
